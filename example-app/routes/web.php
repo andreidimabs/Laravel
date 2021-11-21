@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::get('/', 'MyController@index'); 
+Route::get('/about', 'MyController@about');
+Route::get('/service', 'MyController@services');
+
+
+Route::resource('posts', 'PostController');
